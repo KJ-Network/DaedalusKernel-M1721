@@ -225,23 +225,6 @@
 		linux,max-uv = <3300000>;
 	};
 
-	spi@78b5000 {
-		status = "ok";
-
-        goodix_fp@0 {
-            compatible = "goodix,fingerprint";
-			status = "ok";
-            reg = <0x0>;
-
-            interrupt-parent = <&tlmm>;
-            interrupts = <48 1>;
-            goodix,gpio_irq = <&tlmm 48 0>;
-            goodix,gpio_reset = <&tlmm 140 0>;
-            goodix,gpio_pwr = <&tlmm 134 0>;
-            spi-max-frequency = <8000000>;
-        };
-    };
-
 	i2c@78b6000 {
         status = "ok";
 
